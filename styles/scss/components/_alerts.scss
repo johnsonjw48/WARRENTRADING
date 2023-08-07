@@ -1,0 +1,7 @@
+@each $key, $value in $theme-colors {
+  .alert-#{$key} {
+    background: rgba($value, 0.1);
+    border: none;
+    color: $value;
+  }
+}

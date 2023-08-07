@@ -1,0 +1,9 @@
+.brand-section {
+  .brand-logo {
+    opacity: 0.4;
+    @include transition(all 0.3s ease-in-out);
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,198 @@
+.bg-1 {
+  background: url(#{$image-path}/hero-1-bg.png) no-repeat center center / cover;
+}
+
+.home-banner {
+  padding: 150px 0 75px;
+  position: relative;
+  h1 {
+    font-size: 3.5rem;
+    @media (max-width: 1024px) {
+      font-size: 3rem;
+    }
+    @media (max-width: 767px) {
+      font-size: 2.25rem;
+    }
+  }
+  .line {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    &:before {
+      @include position(absolute, null, 0, 0, 0, -1);
+      height: 10px;
+      width: 100%;
+      content: "";
+      background: $primary;
+    }
+  }
+  .play-box {
+    display: flex;
+    align-items: center;
+    .video-button {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      font-size: 24px;
+      position: relative;
+      border-color: transparent;
+      @include box-shadow(0px 0px 25px 3px rgba($dark, 0.7));
+      &:before {
+        content: "";
+        @include position(absolute, -25%, null, null, -25%);
+        width: 150%;
+        height: 150%;
+        animation-delay: 0s;
+        animation: pulse 2s;
+        animation-direction: forwards;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps;
+        opacity: 1;
+        border-radius: 100%;
+        @include border(null, 5px, solid, rgba($white, 0.7));
+      }
+      &:hover {
+        background: $dark !important;
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: inset 0px 0px 25px 3px rgba($white, 0.75), 0px 0px 25px 10px rgba($white, 0.75);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: none;
+  }
+}
+
+.fullscreen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.home-banner {
+  .banner-thumb {
+    @include position(absolute, 0, 0, 0, null);
+    text-align: right;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    @media (max-width: 991px) {
+      position: static;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  .hero-2-overlay {
+    @include position(absolute, -70px, null, null, -75px);
+    @media (max-width: 767px) {
+      margin-top: 70px;
+    }
+  }
+  .mover-img {
+    animation: mover 3s infinite alternate;
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+.subscribe-form {
+  @media (min-width: 1200px) {
+    width: 80%;
+  }
+  .icon {
+    @include position(absolute, 50%, null, null, 20px);
+    @include transform(translateY(-50%));
+    @media (max-width: 479px) {
+      top: 37px;
+    }
+  }
+  .form-control {
+    border-radius: 8px;
+    height: 70px;
+    border: 0;
+    padding-right: 160px;
+    padding-left: 50px;
+    color: $body-color;
+    padding-top: 0;
+    padding-bottom: 100px;
+    padding-bottom: 0;
+    background: darken($light, 1);
+    @media (max-width: 479px) {
+      padding-right: 0;
+      border-radius: 8px;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  .btn {
+    @include position(absolute, 50%, 10px, null, null);
+    @include transform(translateY(-50%));
+    @media (max-width: 479px) {
+      padding: 0 20px;
+      position: static;
+      @include transform(translateY(0));
+      margin-top: 15px;
+    }
+  }
+}
+
+//video modal css
+.video-modal {
+  @include position(fixed, 0, 0, 0, 0, 999);
+  width: 100%;
+  background: rgba($black, 0.6);
+  
+  @media (max-width: 767px) {
+    overflow: auto;
+  }
+  .yt-video {
+    max-height: 400px;
+    max-width: 600px;
+    margin: auto;
+    iframe {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    @include position(absolute, 0, 0, 0, 0, 999);
+    @media (max-width: 767px) {
+      max-height: 250px;
+    }
+    @media (max-width: 479px) {
+      max-height: 300px;
+      max-width: 300px;
+    }
+  }
+
+  .btn-close {
+    color: $white;
+    position: static;
+    padding: 0;
+    float: right;
+    i {
+      font-size: 18px;
+    }
+    &:hover {
+      background: rgba($white, 0.1);
+    }
+  }
+}

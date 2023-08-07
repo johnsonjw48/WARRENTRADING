@@ -1,0 +1,55 @@
+
+body {
+  font-family: $body-font;
+  line-height: 1.75;
+  color: $body-color;
+  overflow-x: hidden;
+}
+
+a {
+  color: $body-color;
+  text-decoration: none;
+  &:hover {
+    color: $dark;
+  }
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: $dark;
+  // font-weight: 400;
+}
+
+// b {
+//   font-weight: 600;
+// }
+
+h1, .h1, h2, .h2 {
+  line-height: 1.25;
+}
+
+h3, .h3, h4, .h4 {
+  line-height: 1.5;
+}
+
+h5, .h5, h6, .h6 {
+  line-height: 1.75;
+}
+
+[class^="uil-"]:before, [class*=" uil-"]:before {
+  margin: 0;
+}

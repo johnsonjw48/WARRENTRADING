@@ -1,0 +1,32 @@
+
+.auth-modal {
+  .modal-header {
+    padding: 60px 60px 0 60px;
+    border-bottom: none;
+    flex-direction: column;
+  }
+  .modal-body {
+    padding: 30px 60px 45px;
+  }
+  .form-control {
+    padding-left: 25px;
+  }
+  .view-pass {
+    cursor: pointer;
+    &:after {
+      content: '';
+      @include position(absolute, 1px, 0, 0, 14px);
+      width: 1px;
+      height: 21px;
+      background: $danger;
+      @include transform(scale(0) rotate(40deg));
+      @include transition(all 0.3s ease-in-out);
+      transform-origin: top;
+    }
+    &.active {
+      &:after {
+        @include transform(scale(1) rotate(40deg));
+      }
+    }
+  }
+}

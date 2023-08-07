@@ -1,0 +1,20 @@
+.facts {
+  box-shadow: 0 0 20px 0 rgba($dark, 0.09);
+  .fact {
+    @include border(right, 1px, solid, $border-color);
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.fact-box {
+  padding: 30px;
+  display: flex;
+  .icon {
+    font-size: 48px;
+    color: $primary;
+    margin-right: 15px;
+    line-height: 1;
+  }
+}

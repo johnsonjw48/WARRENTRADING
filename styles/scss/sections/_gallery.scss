@@ -1,0 +1,77 @@
+
+.single-gallery {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  .gallery-image{
+    img {
+      width: 100%;
+    }
+  }
+  .gallery-icon {
+    .image-popup {
+      background-color: $primary;
+      width: 120px;
+      height: 120px;
+      @include position(absolute, 0, 0, 0, 0);
+      margin: auto;
+      @include transition(all 0.3s ease-out 0s);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      @include transform(scale(0));
+      line-height: inherit;
+      i {
+        font-size: 40px;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+  &:hover {
+    .gallery-icon {
+      .image-popup {
+        @include transform(scale(1));
+      }
+    }
+  }
+}
+
+.filter-nav {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-bottom: 30px;
+  li {
+    display: inline-block;
+    margin-right: 50px;
+    padding-bottom: 3px;
+    position: relative;
+    color: $dark;
+    margin-top: 30px;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      margin-left: 15px;
+      margin-top: 0;
+    }
+    &:before {
+      @include position(absolute, null, 0, 0, 0);
+      content: "";
+      width: 0;
+      height: 2px;
+      background-color: $success;
+      @include transition(all 0.3s ease-out 0s);
+    }
+    &:hover, &.active {
+      &:before {
+        width: 100%;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

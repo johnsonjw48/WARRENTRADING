@@ -1,0 +1,15 @@
+.modal {
+  .modal-header {
+    flex-direction: column;
+    border-bottom: none;
+    padding:30px 30px 15px;
+    position: relative;
+  }
+  .modal-body {
+    padding: 15px 30px 30px;
+  }
+
+  .btn-close {
+    padding: 4px;
+  }
+}

@@ -1,0 +1,7 @@
+.about-box {
+  padding: 30px;
+  @include border(null, 1px, solid, $border-color);
+  .about-head {
+    display: flex;
+  }
+}

@@ -1,0 +1,51 @@
+
+$primary: #f14836;
+$danger: #fa5253;
+$success: #50C594;
+$info: #25c2e3;
+$warning: #ff7800;
+$secondary: #4B4B5A;
+$light: #fafafd;
+$dark: #2a354f;
+$muted: #a7a7bf;
+$blue: #3e2cea ;
+$gray-100: #f3f7f9 !default;
+$gray-200: #e2e7f1 !default;
+$gray-300: #ced4da !default;
+$gray-400: #adb5bd !default;
+$gray-500: #95a3bc !default;
+$gray-600: #6c757d !default;
+$gray-700: #4B4B5A !default;
+$gray-800: #343a40 !default;
+$gray-900: #152136 !default;
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "blue":       $blue
+);
+
+
+$body-color: #a0a0bf;
+$black:    #000;
+$white:    #fff;
+$nav-item-color: #002e44;
+$border-color: #e1e8ec;
+// $body-font: "Nunito Sans", sans-serif;
+$body-font: "Poppins", sans-serif;
+$themify-font: "themify";
+$unicon-line: "unicons-line";
+$contact-icon-color: $danger;
+$footer-bg: #00283B;
+$image-path: "../../../public/images";
+
+$brand-icons: (
+  'twitter': #1da1f2,
+  'facebook': #3b5999,
+  'google': #dd4b39
+);

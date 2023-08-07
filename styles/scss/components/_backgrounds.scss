@@ -1,0 +1,10 @@
+@each $key, $value in $theme-colors {
+  .bg-#{$key} {
+    background: $value !important;
+  }
+}
+
+
+.bg-muted {
+  background: $muted !important;
+}

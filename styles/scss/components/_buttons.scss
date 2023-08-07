@@ -1,0 +1,46 @@
+
+.btn {
+  height: 44px;
+  line-height: 43px;
+  padding: 0 20px;
+  color: $white;
+  font-size: 14px;
+  i {
+    font-size: 18px;
+  }
+}
+
+.btn-sm {
+  height: 36px;
+  line-height: 35px;
+}
+
+.btn-lg {
+  height: 56px;
+  line-height: 55px;
+  border-radius: 60px;
+} 
+
+
+@each $key, $value in $theme-colors {
+  .btn-#{$key} {
+    background: $value !important;
+    border-color: $value;
+    color: $white;
+    @include transition(all 0.4s);
+    &:hover, &:focus, &:active {    
+      background: transparent !important;
+      color: $value;
+      border-color: $value;
+    }
+  }
+  .btn-outline-#{$key} {
+    border-color: $value;
+    color: $value;
+    @include transition(all 0.4s);
+    &:hover, &:focus, &:active {
+      background: $value;
+      color: $white;
+    }
+  }
+}

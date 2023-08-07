@@ -1,0 +1,36 @@
+.form-group {
+  .icon {
+    @include position(absolute, 50%, 15px, null, null);
+    @include transform(translateY(-50%));
+    color: $contact-icon-color;
+    &.left {
+      right: auto;
+      left: 0;
+    }
+  }
+}
+
+.form-control {
+  border-radius: 4px;
+  padding: 12px 45px 12px 15px;
+  &:focus {
+    box-shadow: none;
+    border-color: $contact-icon-color;
+  }
+}
+
+.no-icon {
+  .form-control {
+    padding: 12px 15px;
+  }
+}
+
+textarea.form-control {
+  height: 120px;
+}
+
+.invalid-field {
+  .form-control {
+    border-color: $contact-icon-color;
+  }
+}

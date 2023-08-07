@@ -1,0 +1,151 @@
+.blog-post-meta {
+  display: flex;
+  margin-bottom: 15px;
+  @media (max-width: 579px){
+    flex-wrap: wrap;
+  }
+  li {
+    margin-right: 15px;
+    font-size: 14px;
+    &:last-child {
+      margin-right: 0;
+    }
+    span {
+      color: $dark;
+    }
+  }
+}
+
+.blog-details-wrapper {
+  padding: 50px;
+  background: $white;
+  @media (max-width: 767px){
+    padding: 30px;
+  }
+  .blog-content {
+    blockquote {
+      position: relative;
+      background: rgba($primary, 0.1);
+      text-align: center;
+      padding: 60px 40px;
+      border-radius: 10px;
+      z-index: 1;
+      @media (max-width: 767px) {
+        padding: 60px 30px;
+      }
+      @media (max-width: 579px) {
+        padding: 30px 15px;
+      }
+      figure {
+        @include position(absolute, 50%, 40px, null, null, -1);
+        @include transform(translateY(-50%));
+      }
+      .text-body {
+        &:hover {
+          color: $danger !important;
+        }
+      }
+    }
+  }
+  .share-post-tag,
+  .post-nav {
+    margin-bottom: 45px;
+    padding-bottom: 45px;
+    @include border(bottom, 1px, solid, $border-color);
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  .post-nav {
+    .prev-nev {
+      @media (max-width: 767px) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .share-post-tag {
+    .tag-list {
+      @media (max-width: 767px){
+        margin-bottom: 30px;
+        a {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .related-posts {
+    .blog-grid-item {
+      box-shadow: 0 8px 16px 0 rgba($black, 0.09);
+      margin: 0 15px 15px;
+    }
+  }
+  .author-box {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    @include border(null, 1px, solid, rgba($primary, 0.2));
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+    .author-img {
+      @media (max-width: 767px) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .comment-area {
+    .media-body {
+      @include border(bottom, 1px, solid, $border-color);
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      .comment-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        @media (max-width: 767px) {
+          flex-wrap: wrap;
+          .comment-author-info {
+            width: 100%;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+    .media {
+      figure {
+        @media (max-width: 579px) {
+          margin-right: 0;
+          margin-bottom: 15px;
+          width: 100%;
+        }
+      }
+      &:last-child {
+        .media-body {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+.comment-form-area {
+  .comment-form {
+    padding: 50px;
+    background: rgba($primary, 0.08);
+    @media (max-width: 767px) {
+      padding: 30px;
+    }
+    
+    @media (max-width: 579px) {
+      padding: 30px 15px;
+    }
+    .form-control {
+      background: $white;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+//Features box
+.feature-box {
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  @include border(null, 1px, solid, lighten($border-color, 3));
+  @include transition(all 0.3s);
+  .icon {
+    font-size: 48px;
+    color: $primary;
+    margin-right: 15px;
+    line-height: 1;
+  }
+  &:hover {
+    border-color: transparent;
+    @include box-shadow(0 0 20px 0 rgba($dark, 0.09));
+  }
+}
+
+.feature-box-2 {
+  padding: 30px;
+  @include transition(all 0.5s);
+  background: $light;
+  position: relative;
+  overflow: hidden;
+  .icon {
+    font-size: 36px;
+    color: $primary;
+    border-radius: 100%;
+    margin-right: 15px;
+    line-height: 1;
+  }
+
+  .big-icon {
+    @include position(absolute, 50%, null, null, 0);
+    @include transform(translateY(-50%));
+    opacity: 0.1;
+    font-size: 120px;
+    &.icon-right {
+      top: 10%;
+      right: -20px;
+      left: auto;
+    }
+  }
+  &:hover {
+    background-color: $primary;
+    color: rgba($white,.8);
+    h5, .icon {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "variables";
+
+// set position through css params
+@mixin position($pos, $top: null, $right: null, $bottom: null, $left: null, $index: null) {
+    position: $pos;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    z-index: $index;
+}
+
+// set borders through css params
+@mixin border($direction, $width, $style, $color) {
+    @if ($direction==left) {
+        border-left: $width $style $color;
+    } @else if($direction==right) {
+        border-right: $width $style $color;
+    } @else if($direction==top) {
+        border-top: $width $style $color;
+    } @else if($direction==bottom) {
+        border-bottom: $width $style $color;
+    } @else {
+        border: $width $style $color;
+    }
+}
+
+// set transform properties through css params
+@mixin transform($property) {
+    transform: $property;
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    -moz-transform: $property;
+}
+
+// set transform properties through css params
+@mixin transform-origin($property) {
+    transform-origin: $property;
+    -webkit-transform-origin: $property;
+    -ms-transform-origin: $property;
+    -moz-transform-origin: $property;
+}
+
+// set transitions through css params
+@mixin transition($val) {
+    transition: $val;
+    -webkit-transition: $val;
+    -ms-transition: $val;
+    -moz-transition: $val;
+}
+
+@mixin box-shadow($shadow) {
+    box-shadow: $shadow;
+}

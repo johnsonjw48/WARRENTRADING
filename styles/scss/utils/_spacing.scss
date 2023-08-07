@@ -1,0 +1,63 @@
+@for $i from 1 to 5 {
+  .me-#{$i*15}, .mx-#{$i*15} {
+    margin-right: $i*15px;
+  }
+  .ms-#{$i*15}, .mx-#{$i*15} {
+    margin-left: $i*15px;
+  }
+  .mt-#{$i*15}, .my-#{$i*15} {
+    margin-top: $i*15px;
+  }
+  .mb-#{$i*15}, .my-#{$i*15} {
+    margin-bottom: $i*15px;
+  }
+
+  .m-#{$i*15} {
+    margin: $i*15px;
+  }
+
+  .pe-#{$i*15}, .px-#{$i*15} {
+    padding-right: $i*15px;
+  }
+  .ps-#{$i*15}, .px-#{$i*15} {
+    padding-left: $i*15px;
+  }
+  .pt-#{$i*15}, .py-#{$i*15} {
+    padding-top: $i*15px;
+  }
+  .pb-#{$i*15}, .py-#{$i*15} {
+    padding-bottom: $i*15px;
+  }
+  
+  .p-#{$i*15} {
+    padding: $i*15px;
+  }
+}
+
+.mt--60 {
+  margin-top: -60px;
+}
+
+.mt--100 {
+  margin-top: -100px;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pt-70 {
+  padding-top: 70px;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.pb-160 {
+  padding-bottom: 160px;
+}
+
+.section-spacer {
+  padding: 100px 0;
+}

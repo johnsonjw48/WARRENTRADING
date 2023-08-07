@@ -1,0 +1,41 @@
+.pricing-box {
+  background: $white;
+  @include border(null, 1px, solid, $border-color);
+  padding: 30px;
+  h2, h6, h5 {
+    font-weight: 400;
+  }
+  .icon {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: $primary;
+  }
+  .pre-text {
+    position: relative;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    &:before {
+      content: "";
+      @include position(absolute, null, 0, 0, 0);
+      height: 1px;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 180px;
+      background: $border-color;
+    }
+  }
+  .footnotesize {
+    font-size: 0.8rem; /* Personnalisez la taille de police selon vos préférences */;
+  }
+
+}
+.pricing-box.recommanded {
+  background: $dark;
+  h1, h5 {
+    color: $white;
+  }
+  .icon {
+    background: $muted;
+  }
+}

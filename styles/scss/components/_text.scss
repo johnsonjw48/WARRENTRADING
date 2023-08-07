@@ -1,0 +1,16 @@
+
+@each $key, $value in $theme-colors {
+  .text-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $brand-icons {
+  .text-#{$key} {
+    color: $value !important;
+  }
+}
+
+.text-muted {
+  color: $muted !important;
+}

@@ -1,0 +1,171 @@
+.navbar-brand {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 32px;
+  padding: 0;
+  position: relative;
+  color: $dark;
+  &:after {
+    @include position(absolute, null, -7px, 7px, null);
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: $primary;
+    content: "";
+  }
+  &:hover {
+    color: $dark
+  }
+}
+
+.projectNameStart {
+  color: chocolate;
+}
+
+.projectNameEnd {
+  color: $blue;
+}
+
+.navbar-toggler {
+  @include border(null, 2px, solid, $dark);
+  padding: 0;
+  border-radius: 0;
+  width: 48px;
+  height: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .toggler-icon {
+    width: 30px;
+    height: 2px;
+    background-color: $dark;
+    margin: 3px 0;
+    display: block;
+    position: relative;
+    @include transition(0.3s);
+  }
+
+  &:not(.collapsed) {
+    & .toggler-icon {
+      &:nth-of-type(1) {
+        @include transform(rotate(45deg));
+        top: 8px;
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        @include transform(rotate(135deg));
+        top: -8px;
+      }
+    }
+  }
+}
+
+.navbar-btn {
+  @media (min-width: 579px) and (max-width: 991px) {
+    @include position(absolute, 5px, 65px, null, null);
+  }
+}
+
+.header {
+  padding: 15px 0;
+  // animation: sticky 1.2s;
+  @include position(fixed, 0, 0, null, 0, 999);
+  background: $white;
+  .navbar {
+    padding: 0;
+  }
+  &.sticky {
+    padding: 15px 0;
+    @include box-shadow(0px 5px 5px 0px rgba($black, 0.04));
+    @include transition(all 0.3s ease-in-out);
+    animation: sticky 1.2s;
+  }
+  .navbar-collapse {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @include position(absolute, 105%, 0, null, 0, 5);
+      width: 100%;
+      background: $white;
+      padding: 10px 15px;
+      box-shadow: 0 20px 20px 0 rgba($black, 0.08);
+    }
+  }
+}
+
+.header-light {
+  background: $light;
+  &.sticky { 
+    background: $white;
+  }
+}
+
+.navbar-expand-lg {
+  .navbar-nav {
+    .nav-link {
+      @media (min-width: 992px) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.navbar-nav {
+  li {
+    padding: 0 20px;
+    @media (max-width: 1024px) {
+      padding: 0 15px;
+    }
+    @media (max-width: 767px) {
+      padding: 0 10px;
+    }
+    .nav-link {
+      color: lighten($dark, 10);
+      font-size: 14px;
+      font-weight: 500;
+      &.active {
+        color: $primary;
+        &:before {
+          @include transform(scaleX(1));
+          @media (max-width: 991px) {
+            @include transform(scaleX(1) scaleY(1));
+          }
+        }
+      }
+    }
+  }
+}
+
+//react overwrite css
+.navbar-light {
+  .navbar-nav {
+    .nav-link {
+      color: lighten($dark, 10);
+      &.active {
+        color: $primary;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes sticky {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes sticky {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 0;
+  }
+}
